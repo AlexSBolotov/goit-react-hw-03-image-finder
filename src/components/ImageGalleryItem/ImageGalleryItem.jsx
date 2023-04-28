@@ -1,10 +1,15 @@
 import s from './ImageGalleryItem.module.css';
 // import { PropTypes } from 'react'
 
-export default function ImageGalleryItem() {
+export default function ImageGalleryItem({ openModal }) {
   return (
     <li className={s.imageGalleryItem}>
-      <img className={s.imageGalleryItemImage} src="" alt="" />
+      <img
+        onClick={openModal}
+        className={s.imageGalleryItemImage}
+        src=""
+        alt=""
+      />
     </li>
   );
 }
