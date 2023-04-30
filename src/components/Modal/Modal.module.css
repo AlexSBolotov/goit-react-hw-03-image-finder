@@ -13,8 +13,10 @@
 
 .modal {
   background-color: #fff;
-  /* width: 800px;
-  height: 600px; */
-  width: calc(100vw - 160px);
-  height: calc(100vh - 120px);
+  width: calc(100vw - 320px);
+  /* height: calc(100vh - 220px); */
+}
+.modal > img {
+  display: block;
+  width: 100%;
 }
