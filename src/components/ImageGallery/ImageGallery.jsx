@@ -20,7 +20,7 @@ export default class ImageGallery extends Component {
       prevProps.page !== this.props.page ||
       prevProps.query !== this.props.query
     ) {
-      console.log(this.props.query);
+      // console.log(this.props.query);
       const query = this.props.query;
       const page = this.state.page;
       if (prevProps.query !== this.props.query) {
@@ -42,11 +42,9 @@ export default class ImageGallery extends Component {
   }
 
   loadMore = () => {
-    this.state.page += 1;
-    // this.setState(prev => ({ page: prev.page + 1 }));
+    this.setState(prev => ({ page: prev.page + 1 }));
     console.log(this.state.page);
-    this.props.setPage(this.state.page);
-    console.log(this.props.page);
+    setTimeout(() => this.props.setPage(this.state.page), 500);
   };
   render() {
     const { images, error, isLoading } = this.state;
