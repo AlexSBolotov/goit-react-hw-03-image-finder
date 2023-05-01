@@ -14,8 +14,12 @@ export default class ImageGallery extends Component {
     isLoading: false,
     error: null,
   };
+  // getSnapshotBeforeUpdate() {
 
-  async componentDidUpdate(prevProps, prevState) {
+  //   console.log(document.body.clientHeight);
+  //   return document.body.clientHeight;
+  // }
+  async componentDidUpdate(prevProps, prevState, snapshot) {
     if (
       prevProps.page !== this.props.page ||
       prevProps.query !== this.props.query
@@ -37,6 +41,10 @@ export default class ImageGallery extends Component {
         this.setState({ error });
       } finally {
         this.setState({ isLoading: false });
+        // window.scrollTo({
+        //   top: snapshot,
+        //   behavior: 'smooth',
+        // });
       }
     }
   }

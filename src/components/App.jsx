@@ -66,7 +66,7 @@ export class App extends Component {
 //     this.setState({ isLoading: false });
 //   }
 // }
-// async componentDidUpdate(prevState) {
+// async componentDidUpdate(prevProps, prevState) {
 //   if (prevState.page !== this.state.page) {
 //     console.log(this.state.page);
 //     this.setState({ isLoading: true });
